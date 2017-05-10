@@ -7,13 +7,24 @@
 //
 
 import UIKit
+import SafariServices
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        
     }
+    
+    @IBAction func btn(sender: AnyObject) {
+        let initurl = NSURL(string: "https://www.compathy.net/magazine/2017/04/26/houtoenjoy_singapore_library/")
+        
+        let safariViewController = SFSafariViewController(URL: initurl!)
+        presentViewController(safariViewController, animated: false, completion: nil)
+    }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
